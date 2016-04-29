@@ -4,7 +4,7 @@ import json
 def check_meaning(word):
 	url = 'http://fanyi.youdao.com/openapi.do?keyfrom=showmeeng&key=1890848919&type=data&doctype=json&version=1.1&q='+ word
 	try:
-		results = open("meaning.txt","a")
+		results = open("meaning.csv","a")
 		results.write("\n"+word +"\n")
 		wordinfo= urllib2.urlopen(url).read().decode('utf-8')
 		data = json.loads(wordinfo)
